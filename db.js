@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const mongodbURI = "mongodb://0.0.0.0:27017/e-notes";
-
+require('dotenv').config();
+const mongodbURI = process.env.URI;
 const connectToMongo = () =>{
     mongoose.connect(mongodbURI);
 }
